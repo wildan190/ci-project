@@ -20,7 +20,7 @@ class OpenApiController extends BaseController
                 'version' => '1.0.0',
             ],
             'servers' => [
-                ['url' => rtrim(config('App')->baseURL, '/')],
+                ['url' => '/'],
             ],
             'paths' => [
                 '/api/flights/search' => [
@@ -90,4 +90,3 @@ class OpenApiController extends BaseController
         return $this->response->setJSON($spec);
     }
 }
-
